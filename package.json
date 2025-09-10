@@ -1,0 +1,12 @@
+{
+  "name": "submission-server",
+  "version": "1.0.0",
+  "description": "Server to handle form submissions and display on dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
