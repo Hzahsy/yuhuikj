@@ -149,7 +149,7 @@ class MultiStepForm {
             // Send data to server
             console.log('Sending request to server with data:', data);
 
-            const response = await fetch('http://localhost:3000/submit', {
+            const response = await fetch('/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

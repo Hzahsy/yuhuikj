@@ -301,6 +301,617 @@
   }
 }
 
+/* ==========================================================================
+   #SPECIFIC DEVICE OPTIMIZATIONS
+   ========================================================================== */
+
+/* iPhone SE (375px width) */
+@media screen and (max-width: 375px) and (min-width: 374px) {
+  .hero-content h1 {
+    font-size: 1.625rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .form-container {
+    padding: 1.25rem;
+    margin: 0.5rem;
+  }
+
+  .nav-menu {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* iPhone XR (414px width) */
+@media screen and (max-width: 414px) and (min-width: 413px) {
+  .hero-content h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* iPhone 16 / iPhone 16 Pro (393px width) */
+@media screen and (max-width: 393px) and (min-width: 392px) {
+  .hero-content h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.025rem;
+  }
+
+  .btn {
+    padding: 0.775rem 1.35rem;
+    font-size: 0.975rem;
+  }
+
+  .form-container {
+    padding: 1.4rem;
+  }
+
+  .nav-menu {
+    width: 88%;
+    max-width: 310px;
+  }
+}
+
+/* iPhone 16 Plus / iPhone 16 Pro Max (430px width) */
+@media screen and (max-width: 430px) and (min-width: 429px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.075rem;
+  }
+
+  .btn {
+    padding: 0.825rem 1.45rem;
+    font-size: 1.025rem;
+  }
+
+  .form-container {
+    padding: 1.6rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Pixel 9 (393px width) */
+@media screen and (max-width: 393px) and (min-width: 392px) and (max-height: 852px) and (min-height: 851px) {
+  .hero-content h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.025rem;
+  }
+
+  .btn {
+    padding: 0.775rem 1.35rem;
+    font-size: 0.975rem;
+  }
+
+  .form-container {
+    padding: 1.4rem;
+  }
+
+  .nav-menu {
+    width: 88%;
+    max-width: 310px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Pixel 9 Pro (412px width) */
+@media screen and (max-width: 412px) and (min-width: 411px) and (max-height: 915px) and (min-height: 914px) {
+  .hero-content h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .nav-menu {
+    width: 85%;
+    max-width: 320px;
+  }
+}
+
+/* Pixel 9 Pro XL (432px width) */
+@media screen and (max-width: 432px) and (min-width: 431px) and (max-height: 930px) and (min-height: 929px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.075rem;
+  }
+
+  .btn {
+    padding: 0.825rem 1.45rem;
+    font-size: 1.025rem;
+  }
+
+  .form-container {
+    padding: 1.6rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .nav-menu {
+    width: 82%;
+    max-width: 330px;
+  }
+}
+
+/* Samsung Galaxy S25 (412px width) */
+@media screen and (max-width: 412px) and (min-width: 411px) and (max-height: 915px) and (min-height: 914px) {
+  .hero-content h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .nav-menu {
+    width: 85%;
+    max-width: 320px;
+  }
+
+  /* Samsung specific optimizations */
+  .hero-section {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* Samsung Galaxy S25+ (432px width) */
+@media screen and (max-width: 432px) and (min-width: 431px) and (max-height: 930px) and (min-height: 929px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.075rem;
+  }
+
+  .btn {
+    padding: 0.825rem 1.45rem;
+    font-size: 1.025rem;
+  }
+
+  .form-container {
+    padding: 1.6rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .nav-menu {
+    width: 82%;
+    max-width: 330px;
+  }
+
+  /* Samsung specific optimizations */
+  .hero-section {
+    padding: 3.5rem 1rem 2.5rem;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .footer-container {
+    padding: 2.5rem 0;
+  }
+}
+
+/* Samsung Galaxy S25 Ultra (412px width) */
+@media screen and (max-width: 412px) and (min-width: 411px) and (max-height: 915px) and (min-height: 914px) and (max-resolution: 500dpi) {
+  .hero-content h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .nav-menu {
+    width: 85%;
+    max-width: 320px;
+  }
+
+  /* Samsung Ultra specific optimizations */
+  .hero-section {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  /* Enhanced for high-resolution display */
+  .hero-image {
+    max-width: 90%;
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+}
+
+/* ==========================================================================
+   #DEVICE CATEGORY OPTIMIZATIONS
+   ========================================================================== */
+
+/* iPhone Devices (General optimizations for iOS devices) */
+@media screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* iOS specific font smoothing */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* iOS specific button styling */
+  .btn {
+    -webkit-appearance: none;
+    border-radius: 8px;
+  }
+
+  /* iOS specific form styling */
+  .form-input,
+  .form-select,
+  .form-textarea {
+    -webkit-appearance: none;
+    border-radius: 8px;
+    background-clip: padding-box;
+  }
+
+  /* iOS specific navigation */
+  .nav-menu {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Android Devices (General optimizations for Android devices) */
+@media screen and (max-width: 432px) and (-webkit-min-device-pixel-ratio: 2.5) or (max-width: 432px) and (min-resolution: 400dpi) {
+  /* Android specific spacing */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Android specific button sizing */
+  .btn {
+    min-height: 48px;
+    padding: 12px 24px;
+  }
+
+  /* Android specific form elements */
+  .form-input,
+  .form-select,
+  .form-textarea {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+
+  /* Android specific grid layouts */
+  .benefits-grid {
+    gap: 16px;
+  }
+
+  .process-grid {
+    gap: 16px;
+  }
+}
+
+/* High DPI Displays (2x and above) */
+@media screen and (-webkit-min-device-pixel-ratio: 2) or (min-resolution: 192dpi) {
+  /* Sharper borders for high DPI */
+  .card,
+  .form-container {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  /* Better text rendering */
+  body {
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Enhanced shadows for high DPI */
+  .card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* Ultra High DPI Displays (3x and above) */
+@media screen and (-webkit-min-device-pixel-ratio: 3) or (min-resolution: 300dpi) {
+  /* Even sharper borders */
+  .card,
+  .form-container {
+    border: 0.5px solid rgba(0, 0, 0, 0.15);
+  }
+
+  /* Optimized typography for ultra high DPI */
+  h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+  /* Enhanced visual hierarchy */
+  .hero-subtitle {
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Portrait Orientation Optimizations */
+@media screen and (orientation: portrait) and (max-width: 432px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 1rem;
+  }
+
+  .hero-cta {
+    margin-top: 1.5rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Landscape Orientation Optimizations */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .hero-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* ==========================================================================
+   #FINAL REFINEMENTS & TESTING CONSIDERATIONS
+   ========================================================================== */
+
+/* Performance optimizations for all targeted devices */
+@media screen and (max-width: 432px) {
+  /* Reduce motion for better performance on mobile */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.2s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.2s !important;
+    transition-delay: 0s !important;
+  }
+
+  /* Optimize rendering for mobile devices */
+  .card,
+  .form-container,
+  .btn {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+/* Accessibility improvements for all devices */
+@media screen and (max-width: 432px) {
+  /* Ensure sufficient color contrast */
+  .nav-link:hover,
+  .nav-link:focus {
+    background-color: rgba(16, 185, 129, 0.1);
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+  }
+
+  /* Improve focus indicators */
+  .btn:focus,
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+  }
+
+  /* Ensure minimum touch targets */
+  .nav-link,
+  .btn,
+  button,
+  [role='button'] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Cross-browser compatibility for iOS devices */
+@media screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Fix iOS Safari input styling */
+  .form-input,
+  .form-select,
+  .form-textarea {
+    -webkit-appearance: none;
+    -webkit-border-radius: 8px;
+    background-clip: padding-box;
+  }
+
+  /* Fix iOS button styling */
+  .btn {
+    -webkit-appearance: none;
+    -webkit-border-radius: 8px;
+  }
+
+  /* Fix iOS text rendering */
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+/* Android-specific optimizations */
+@media screen and (max-width: 432px) and (-webkit-min-device-pixel-ratio: 2.5) or (max-width: 432px) and (min-resolution: 400dpi) {
+  /* Optimize for Android Chrome */
+  .btn {
+    -webkit-tap-highlight-color: rgba(16, 185, 129, 0.3);
+  }
+
+  /* Fix Android scrolling issues */
+  .nav-menu {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  /* Optimize form inputs for Android */
+  .form-input,
+  .form-select,
+  .form-textarea {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+}
+
+/* Testing utilities (remove in production) */
+/* Uncomment these for testing specific device sizes */
+
+/*
+@media screen and (max-width: 375px) { body::before { content: "iPhone SE"; position: fixed; top: 0; left: 0; background: red; color: white; padding: 5px; z-index: 9999; } }
+@media screen and (max-width: 414px) and (min-width: 413px) { body::before { content: "iPhone XR"; position: fixed; top: 0; left: 0; background: blue; color: white; padding: 5px; z-index: 9999; } }
+@media screen and (max-width: 393px) and (min-width: 392px) { body::before { content: "iPhone 16/16 Pro"; position: fixed; top: 0; left: 0; background: green; color: white; padding: 5px; z-index: 9999; } }
+@media screen and (max-width: 430px) and (min-width: 429px) { body::before { content: "iPhone 16 Plus/Pro Max"; position: fixed; top: 0; left: 0; background: purple; color: white; padding: 5px; z-index: 9999; } }
+@media screen and (max-width: 412px) and (min-width: 411px) and (max-height: 915px) { body::before { content: "Pixel 9/Pixel 9 Pro/S25"; position: fixed; top: 0; left: 0; background: orange; color: white; padding: 5px; z-index: 9999; } }
+@media screen and (max-width: 432px) and (min-width: 431px) and (max-height: 930px) { body::before { content: "Pixel 9 Pro XL/S25+"; position: fixed; top: 0; left: 0; background: pink; color: white; padding: 5px; z-index: 9999; } }
+*/
+
 /* Touch Device Optimizations */
 @media (hover: none) and (pointer: coarse) {
   /* Increase tap targets for touch devices */
@@ -389,8 +1000,8 @@
 
 }
 
-@media (max-width: 1021px;){
-  .hero-grid{
+@media (max-width: 1021px) {
+  .hero-grid {
     top: 15rem;
   }
 }

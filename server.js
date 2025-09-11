@@ -4,6 +4,11 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Replit specific configuration
+if (process.env.REPL_ID) {
+  console.log('Running on Replit');
+}
 const SUBMISSIONS_FILE = 'submissions.json';
 
 // Middleware

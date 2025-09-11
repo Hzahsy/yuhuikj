@@ -1,12 +1,27 @@
 {
-  "name": "submission-server",
+  "name": "eco-aisla-form",
   "version": "1.0.0",
-  "description": "Server to handle form submissions and display on dashboard",
+  "description": "EcoAisla - Aislamiento térmico de áticos por solo 1€ con formulario multi-paso",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "install": "npm install"
   },
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "aislamiento",
+    "ático",
+    "energía",
+    "ecológico",
+    "formulario",
+    "multi-paso"
+  ],
+  "author": "EcoAisla",
+  "license": "MIT"
 }
