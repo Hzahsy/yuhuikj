@@ -36,11 +36,11 @@ app.get('/dashboard', (req, res) => {
 });
 
 app.post('/submit', (req, res) => {
-    const { name, email, adress, phone, postal_code } = req.body;
+    const { name, email, address, phone, postal_code, vivienda, property_type } = req.body;
     const submissions = readSubmissions();
-    submissions.push({ name, email, phone, adress, postal_code, timestamp: new Date().toISOString() });
+    submissions.push({ name, email, phone, address, postal_code, vivienda, property_type, timestamp: new Date().toISOString() });
     writeSubmissions(submissions);
-    res.redirect('/');
+    res.json({ message: 'Form submitted successfully', data: { name, email, phone, address, postal_code, vivienda, property_type, timestamp: new Date().toISOString() } });
 });
 
 app.get('/submissions', (req, res) => {

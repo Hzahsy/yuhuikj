@@ -26,9 +26,9 @@ exports.handler = async (event, context) => {
     }
 
     // Validate required fields
-    const { name, email, phone, adress, postal_code } = data;
-    
-    if (!name || !email || !phone || !adress || !postal_code) {
+    const { name, email, phone, address, postal_code, vivienda, property_type } = data;
+
+    if (!name || !email || !phone || !address || !postal_code) {
       return {
         statusCode: 400,
         body: JSON.stringify({ error: 'Missing required fields' }),
@@ -40,8 +40,10 @@ exports.handler = async (event, context) => {
       name,
       email,
       phone,
-      adress,
+      address,
       postal_code,
+      vivienda,
+      property_type,
       timestamp: new Date().toISOString()
     };
 

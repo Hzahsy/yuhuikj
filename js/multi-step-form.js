@@ -88,7 +88,7 @@ class MultiStepForm {
                     this.showError(field, 'Por favor, introduce un código postal válido de 5 dígitos');
                 }
                 
-                if (field.name === 'telefono' && !/^[0-9]{9}$/.test(field.value)) {
+                if (field.name === 'phone' && !/^[0-9]{9}$/.test(field.value)) {
                     isValid = false;
                     this.showError(field, 'Por favor, introduce un número de teléfono válido de 9 dígitos');
                 }
@@ -148,8 +148,8 @@ class MultiStepForm {
             
             // Send data to server
             console.log('Sending request to server with data:', data);
-            
-            const response = await fetch('http://localhost:5506/api/submit', {
+
+            const response = await fetch('http://localhost:3000/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

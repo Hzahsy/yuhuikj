@@ -285,30 +285,91 @@
                 </div>
 
             <div class="form-container" id="form-container">
-        <h1>Submit Your Information</h1>
-        <form action="/submit" method="POST">
-        <div class="form-group">
-            <label class="form-label" for="name">Name:</label>
-            <input class="form-input" type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="email">Email:</label>
-            <input class="form-input" type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="phone">Phone:</label>
-            <input class="form-input" id="phone" name="phone" type="tel" required>
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="adress">Address:</label>
-            <input class="form-input" id="adress" name="adress" required>
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="postal_code">Postal Code:</label>
-            <input class="form-input" id="postal_code" name="postal_code" required>
-        </div>
-            <button type="submit">Submit</button>
-        </div>
+        <h2 class="form-title">Solicitar mi evaluación gratuita</h2>
+        <form id="multiStepForm" action="/submit" method="POST">
+                    <div class="form-progress">
+                        <div class="progress-step active" data-step="1"></div>
+                        <div class="progress-step" data-step="2"></div>
+                        <div class="progress-step" data-step="3"></div>
+                    </div>
+
+                                <!-- Step 1: Vivienda Type -->
+                        <div class="form-step" data-step="1">
+                            <div class="form-group">
+                                <label class="form-label">¿Qué tipo de vivienda tienes? *</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="vivienda" value="Casa" required>
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-label">Casa</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="vivienda" value="Un piso" required>
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-label">Un piso</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="form-next-btn">Siguiente <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                                <!-- Step 2: Ático Type -->
+                        <div class="form-step" data-step="2">
+                            <div class="form-group">
+                                <label class="form-label">¿Cómo es tu ático? *</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="property_type" value="atico_perdido" required>
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-label">Ático perdido (no habitable)</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="property_type" value="atico_habitable" required>
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-label">Ático habitable</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="property_type" value="no_se" required>
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-label">No sé</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="form-prev-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+                                <button type="button" class="form-next-btn">Siguiente <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Personal Information -->
+                        <div class="form-step" data-step="3">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Nombre completo *</label>
+                                <input class="form-input" type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Correo electrónico *</label>
+                                <input class="form-input" type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Teléfono *</label>
+                                <input class="form-input" id="phone" name="phone" type="tel" pattern="[0-9]{9}" maxlength="9" required title="Por favor, introduce un número de teléfono válido de 9 dígitos">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="address">Dirección *</label>
+                                <input class="form-input" id="address" name="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="postal_code">Código postal *</label>
+                                <input class="form-input" id="postal_code" name="postal_code" required>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="form-prev-btn"><i class="fas fa-arrow-left"></i> Volver</button>
+                                <button type="submit" class="form-submit-btn">Enviar solicitud <i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
         </form>
     </div>
             </div>
@@ -1035,9 +1096,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Validate phone
                     if (phoneInput) {
-                        const phoneRegex = /^[0-9\s\-+()]{9,20}$/;
+                        const phoneRegex = /^[0-9]{9}$/;
                         if (!phoneRegex.test(phoneInput.value.trim())) {
-                            showError(phoneInput, 'Por favor, introduce un teléfono válido');
+                            showError(phoneInput, 'Por favor, introduce un número de teléfono válido de 9 dígitos');
                             isValid = false;
                         }
                     }
@@ -1195,108 +1256,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: 0,
                     behavior: 'smooth'
                 });
-            });
-        });
-    </script>
-    <script>
-        // Multi-Step Form Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('multiStepForm');
-            const formSteps = document.querySelectorAll('.form-step');
-            const progressSteps = document.querySelectorAll('.progress-step');
-            const nextButtons = document.querySelectorAll('.form-next-btn');
-            const prevButtons = document.querySelectorAll('.form-prev-btn');
-            let currentStep = 0;
-
-            // Show current step
-            function showStep(step) {
-                formSteps.forEach((formStep, index) => {
-                    formStep.classList.toggle('active', index === step);
-                });
-
-                // Update progress steps
-                progressSteps.forEach((progressStep, index) => {
-                    if (index <= step) {
-                        progressStep.classList.add('active');
-                    } else {
-                        progressStep.classList.remove('active');
-                    }
-                });
-            }
-
-            // Next button click
-            nextButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const currentFormStep = formSteps[currentStep];
-                    const inputs = currentFormStep.querySelectorAll('input[required]');
-                    let isValid = true;
-
-                    // Validate current step
-                    inputs.forEach(input => {
-                        if (!input.checkValidity()) {
-                            input.reportValidity();
-                            isValid = false;
-                        }
-                    });
-
-                    if (isValid) {
-                        currentStep++;
-                        showStep(currentStep);
-                    }
-                });
-            });
-
-            // Previous button click
-            prevButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    currentStep--;
-                    showStep(currentStep);
-                });
-            });
-
-            // Form submission
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                const submitButton = form.querySelector('button[type="submit"]');
-                const originalButtonText = submitButton.innerHTML;
-                
-                try {
-                    // Show loading state
-                    submitButton.disabled = true;
-                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-                    
-                    // Get form data
-                    const formData = new FormData(form);
-                    const formObject = {};
-                    formData.forEach((value, key) => {
-                        formObject[key] = value;
-                    });
-
-                    // Submit the form data to the server
-                    fetch('/submit', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(formObject)
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log('Success:', data);
-                        // Handle success
-                    })
-                    .catch((error) => {
-                        console.error('Error:', error);
-                        // Handle error
-                    });
-                } catch (error) {
-                    console.error('Form submission error:', error);
-                } finally {
-                    // Reset button
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = originalButtonText;
-                }
             });
         });
     </script>
